@@ -1,0 +1,127 @@
+#header {
+	top: 0;
+	z-index: 3;
+}
+#header header {
+  width: 100%;
+	padding: 0 2.5%;
+	justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+#header header .logo {
+	width: 63.5%;
+	aspect-ratio: 1 / 0.3;
+	transform: translateY(-100%);
+	transition: transform .35s;
+	background-size: contain;
+  background-repeat: no-repeat;
+	background-position: bottom center;
+	background-image: url(../images/global/wave-logo.png)
+}
+#header header .logo.active {
+	transform: translateY(0);
+}
+#header header .logo-img {
+	width: 21.5%;
+  height: auto;
+  bottom: 27.5%;
+}
+#header .go-back {
+	width: 5rem;
+	height: 5rem;
+	border: none;
+	border-radius: 50%;
+	position: absolute;
+	top: 7.5vh;
+  left: 3.5vw;
+	background: var(--color-gradient);
+}
+#header .go-back::before {
+  content: '';
+  width: 35%;
+  height: 35%;
+  border-radius: 0.15rem;
+  border: 0.5rem solid var(--color-secondary);
+  border-top-color: transparent;
+  border-right-color: transparent;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(50% - 0.5rem);
+	transform: rotate(45deg);
+}
+#bg {
+  width: 25%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 27%;
+  font-weight: 600;
+  font-size: 1.35rem;
+  text-transform: uppercase;
+  transition: .33s opacity, .33s visibility, .33s transform;
+  background-color: var(--color-primary);
+}
+#bg::before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	animation: 3s pulse-black infinite;
+	background-color: var(--color-primary);
+}
+nav {
+	padding-top: 300px;
+}
+#navbar:not(.active) #bg, #navbar.open #bg {
+	opacity: 0;
+	visibility: hidden;
+	transform: scale(0);
+}
+/* Menú abierto */
+#navbar.open::before {
+	transform: translateX(100%);
+	bottom: 25%;
+}
+#navbar.open .nav-content {
+	transform: scale(1);
+	visibility: visible;
+	transition-delay: 0s;
+	bottom: 25%;
+}
+#navbar.open + .close-nav {
+	display: block;
+}
+
+@keyframes boing {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-1.75rem);
+	}
+}
+@keyframes pulse-black {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+  
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 5rem rgba(0, 0, 0, 0);
+  }
+  
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}

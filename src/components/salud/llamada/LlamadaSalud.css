@@ -1,0 +1,51 @@
+.answers .answer {
+	width: 40%;
+  aspect-ratio: 1 / 3.25;
+	position: absolute;
+	bottom: 0;
+	animation-delay: .5s;
+	animation-duration: .33s;
+	animation-fill-mode: forwards;
+}
+.answers .answer::before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	background-image: url(../../../images/sos/base-negra-si.png)
+}
+.answers .answer.left {
+	left: 0;
+	transform: translateX(-100%);
+	animation-name: in-left;
+}
+.answers .answer.left::before {
+	background-position: bottom left;
+	background-image: url(../../../images/sos/base-negra-no.png)
+}
+.answers .answer.right {
+	right: 0;
+	transform: translateX(100%);
+	animation-name: in-right;
+}
+@keyframes in-left {
+	from {
+		transform: translateX(-100%);
+	}
+	to {
+		transform: translateX(0%);
+	}
+}
+@keyframes in-right {
+	from {
+		transform: translateX(100%);
+	}
+	to {
+		transform: translateX(0%);
+	}
+}

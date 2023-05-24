@@ -1,0 +1,348 @@
+@font-face {
+  font-display: swap;
+  font-family: "IBM";
+  src: url("./fonts/IBM_Plex_Sans/IBMPlexSans-Regular.woff2") format("woff2"), 
+      url("./fonts/IBM_Plex_Sans/IBMPlexSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-display: swap;
+  font-family: "IBM";
+  src: url("./fonts/IBM_Plex_Sans/IBMPlexSans-Bold.woff2") format("woff2"), 
+      url("./fonts/IBM_Plex_Sans/IBMPlexSans-Bold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+html,
+body {
+  color: #191919;
+  font-weight: normal;
+  font-size: max(16px, 1.1vw);
+  scroll-behavior: smooth;
+  background-color: #ebebeb;
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "IBM", "Helvetica";
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+}
+*:focus {
+  outline: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+img.col-1 {
+  height: auto;
+}
+.inl,
+.btns {
+  display: flex;
+  align-items: center;
+}
+.d-none,
+.d-sm-block,
+.d-md-flex,
+.d-sm-flex,
+[hidden] {
+  display: none;
+}
+.flex-center {
+  justify-content: center;
+}
+.flex-between {
+  justify-content: space-between;
+}
+.relative {
+  position: relative;
+}
+[class*=cnt] {
+  position: absolute;
+  margin: auto;
+}
+.cntV,
+.cnt {
+  top: 0;
+  bottom: 0;
+}
+.cntH,
+.cnt {
+  left: 0;
+  right: 0;
+}
+.mx-auto,
+.ml-auto {
+  margin-left: auto;
+}
+.mx-auto,
+.mr-auto {
+  margin-right: auto;
+}
+.txt-center {
+  text-align: center;
+}
+.clr-black {
+  color: #191919;
+}
+.clr-white {
+  color: white;
+}
+h1,
+.h1 {
+  font-size: 4.5rem;
+  line-height: 1.25em;
+}
+h2,
+.h2 {
+  font-size: 4rem;
+}
+h3,
+.h3 {
+  font-size: 2.5rem;
+  letter-spacing: 0.0888em;
+}
+h4,
+.h4 {
+  font-size: 1.55rem;
+  line-height: 1.428em;
+}
+h5,
+.h5 {
+  font-size: 1.166rem;
+  line-height: 1.33em;
+}
+h6,
+.h6 {
+  font-size: 1.111rem;
+  line-height: 1em;
+}
+p {
+  font-size: 1rem;
+  line-height: 1.5em;
+}
+label {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.03833em;
+}
+.btns {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 100%;
+  border-radius: 0.35rem;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  justify-content: center;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+  transition-duration: 0.25s, 0.3s;
+  transition-property: box-shadow, transform;
+  background: black;
+}
+.btns span {
+  color: white;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  letter-spacing: 0.0476em;
+}
+@media (hover: hover) {
+  .btns:hover {
+    box-shadow: 0 0 15px -8px rgba(0, 0, 0, 0.95);
+    transform: scale(1.01);
+  }
+}
+.btns:active {
+  transform: scale(0.975);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+input, select {
+  width: 100%;
+  padding: 0.5rem 1.85rem;
+  border: none;
+  color: #191919;
+  font-size: 1.166rem;
+  text-align: left;
+  letter-spacing: 0.0476em;
+  appearance: none;
+  background: none;
+}
+.group-input {
+  width: 100%;
+  border-bottom: 1px solid #3c3c3c;
+  cursor: pointer;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  transition-duration: 0.25s, 0.3s;
+  transition-property: box-shadow, transform;
+}
+.group-input + .group-input {
+  margin-top: .4rem;
+}
+.group-input.select::before {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 1px solid #3c3c3c;
+  border-bottom: 1px solid #3c3c3c;
+  margin: auto;
+  pointer-events: none;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0.75rem;
+  bottom: 0;
+  transform: translate(0) rotate(45deg);
+  transition: transform 0.22s;
+}
+.group-input select {
+  border: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  background: none;
+}
+@media (hover: hover) {
+  .group-input:hover {
+    box-shadow: 0 0 15px -8px rgba(0, 0, 0, 0.95);
+    transform: scale(1.01);
+  }
+  .group-input:hover::before {
+    transform: translateY(0.15rem) rotate(45deg);
+  }
+}
+.error {
+  color: red;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 29px;
+  letter-spacing: 0.6px;
+  text-transform: inherit;
+}
+@media screen and (max-width: 768px) {
+  .d-md-none {
+    display: none;
+  }
+  .d-md-flex {
+    display: flex;
+  }
+  .txt-md-normal {
+    white-space: normal;
+  }
+}
+@media screen and (max-width: 640px) {
+  html,
+body {
+    font-size: min(16px, 3.85vw);
+  }
+  .col-sm-1 {
+    width: 100%;
+  }
+  .mx-sm-auto,
+.ml-sm-auto {
+    margin-left: auto;
+  }
+  .mx-sm-auto,
+.mr-sm-auto {
+    margin-right: auto;
+  }
+  .flex-sm-column {
+    flex-direction: column;
+  }
+  .flex-sm-center {
+    justify-content: center;
+  }
+  .d-sm-none {
+    display: none;
+  }
+  .d-sm-block {
+    display: block;
+  }
+  .txt-sm-normal {
+    white-space: normal;
+  }
+  h1,
+.h1 {
+    font-size: 2.5rem;
+  }
+  h2,
+.h2 {
+    font-size: 2.8rem;
+  }
+  h3,
+.h3 {
+    font-size: 2rem;
+  }
+  h4,
+.h4 {
+    font-size: 1.24rem;
+  }
+}
+@media (hover: hover) {
+  .group-input .select .content-options .option:hover {
+    background-color: rgba(25, 25, 25, 0.1);
+  }
+}
+
+/* Styles */
+header .logo {
+  width: 63.5%;
+  max-width: 15rem;
+  aspect-ratio: 1 / 0.3;
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-image: url(./images/wave-logo.png);
+}
+header .logo-img {
+	width: 21.5%;
+  height: auto;
+  bottom: 27.5%;
+}
+
+
+section {
+  padding: 7.5rem 5% 2.5rem;
+}
+#form {
+  width: 100%;
+  max-width: 25rem;
+  margin-top: 2.5rem;
+}
+#form .btns {
+  margin-top: 2.5rem;
+}

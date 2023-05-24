@@ -1,0 +1,19 @@
+
+  #home {
+	padding: 12% 5%;
+  }
+  #home h2.h4 {
+	font-weight: 400;
+  }
+
+  #home h2.h3 {
+	margin-top: 0.9rem;
+	font-weight: 100;
+	font-size: 100px;
+  }
+
+  .deep {
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+  }

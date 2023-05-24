@@ -1,0 +1,28 @@
+.answers .answer {
+	width: 40%;
+  aspect-ratio: 1 / 3.25;
+	position: absolute;
+	bottom: 0;
+}
+.answers .answer::before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	background-image: url(../../../images/sos/base-negra-si.png)
+}
+.answers .answer.left {
+	left: 0;
+}
+.answers .answer.left::before {
+	background-position: bottom left;
+	background-image: url(../../../images/sos/base-negra-no.png)
+}
+.answers .answer.right {
+	right: 0;
+}
