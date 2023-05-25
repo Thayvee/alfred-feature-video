@@ -12,7 +12,7 @@
 	align-items: center;
 }
 
-iframe #ayuda {
+.ayudaEnCamino {
 	width: 1290px !important;
 	height: 900px;
 	display: flex;
@@ -20,4 +20,3 @@ iframe #ayuda {
 	justify-content: center;
 	margin-top: 120px;
   }
-  
