@@ -12,7 +12,7 @@ function Juegos() {
       </div>
       <div className="camera relative">
         <img src={mask} alt='' width='' height='' className='full cnt'/>
-        <iframe id="ayuda" src='http://localhost:9080/v1/video' className='embed' title='Deepar' />
+        <iframe src='http://localhost:9080/v1/video' className='embed ayudaEnCamino' title='Deepar' />
       </div>
       <div className='px'>
         <h3 className='txt-center h5'>Toda la actividad <br/> está siendo grabada y monitoreada.</h3>
